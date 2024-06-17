@@ -4,7 +4,7 @@ namespace lianok\pay\request;
 
 use lianok\core\entity\AbstractDockingRequest;
 
-class ApiHLOrderPayUnifiedRequest extends AbstractDockingRequest
+class ApiHlOrderPayNativeRequest extends AbstractDockingRequest
 {
 
     /**
@@ -54,24 +54,9 @@ class ApiHLOrderPayUnifiedRequest extends AbstractDockingRequest
     /**
      * 支付方式
      * 不传默认支持所有支付方式，传则只生成对应支付方式的支付二维码跳转链接
+     * com.lianok.docking.enums.PayWayEnum
      */
     public string $payWay;
-    /**
-     * 限制卡类型，枚举值
-     * 取值范围：
-     * 1 限定不能使用信用卡支付
-     * 2 限制花呗支付
-     * 3 限制花呗分期
-     * 4 限制所有的信用支付
-     */
-    public string $limitPay;
-    /**
-     * 订单失效时间，
-     * 单位为秒，精确到个位
-     * 失效时间范围60秒~600秒，建议传60的整倍数
-     * 火脸默认订单失效时间为30分钟
-     */
-    public string $payExpireTime;
     /**
      * 支付二维码链接失效时间，
      * 单位为秒，精确到个位
@@ -80,30 +65,11 @@ class ApiHLOrderPayUnifiedRequest extends AbstractDockingRequest
      */
     public string $payUrlExpireTime;
     /**
-     * 订单优惠标记，
-     * 订单优惠标记，透传给微信
-     * 创建券时如果添加goodsTag标记，在传入goodsTag参数才可以核销对应券
-     */
-    public string $goodsTag;
-    /**
      * 商品详情
      * 按微信单品优惠券格式传递透传给微信;请做UrlEncode
      * 无单品券优惠信息请不要传此字段
      */
     public string $goodsInfo;
-    /**
-     * 订单分账标识
-     * 0不分账
-     * 1分账
-     * 2延时结算
-     * 不传默认为普通交易
-     */
-    public string $shareMarkFlag;
-    /**
-     * 支付成功后跳转地址
-     * 当消费者订单支付成功后可跳转至该地址
-     */
-    public string $callBackUrl;
     /**
      * 客户端用户IP
      */
@@ -111,6 +77,6 @@ class ApiHLOrderPayUnifiedRequest extends AbstractDockingRequest
 
     public function getResource(): string
     {
-        return "api.hl.order.pay.unified";
+        return "api.hl.order.pay.native";
     }
 }

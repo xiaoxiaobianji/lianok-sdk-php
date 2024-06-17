@@ -1,39 +1,63 @@
 <?php
 
-require_once '../docking/DefaultClient.php';
-require_once '../docking/request/ApiHLOrderAccountStatementApplyReuqest.php';
-require_once '../docking/request/ApiHLOrderCloseRequest.php';
+use lianok\core\LianokService;
+use lianok\core\utils\DateUtil;
+use lianok\merchant\request\ApiHlMerchantWxpayConfigRequest;
+use lianok\pay\request\ApiHLOrderCloseRequest;
+use lianok\pay\request\ApiHLOrderPayAppletRequest;
+use lianok\pay\request\ApiHLOrderPayBarcodeRequest;
+use lianok\pay\request\ApiHLOrderPayDetailsRequest;
+use lianok\pay\request\ApiHLOrderPayUnifiedRequest;
+use lianok\pay\request\ApiHLOrderRefundDetailsRequest;
+use lianok\pay\request\ApiHLOrderRefundOperationRequest;
+
+echo "1";
+require_once '../core/entity/AbstractDockingRequest.php';
+require_once '../core/entity/LianOkRequest.php';
+require_once '../core/entity/ResponseBase.php';
+require_once '../core/entity/AbstractUploadRequest.php';
+echo "2";
+
+require_once '../core/config/AbstractConfig.php';
+require_once '../core/config/OpenConfig.php';
+require_once '../core/config/EntryConfig.php';
+require_once '../core/config/UploadConfig.php';
+echo "3";
+
+require_once '../core/client/ResponseClient.php';
+require_once '../core/client/UploadClient.php';
+echo "4";
+
+require_once '../core/utils/StringUtil.php';
+require_once '../core/utils/DateUtil.php';
+require_once '../core/utils/HttpClient.php';
+echo "5";
+
+require_once '../core/ResponseBuilder.php';
+require_once '../core/UploadBuilder.php';
+echo "6";
+
+require_once '../LianokService.php';
+require_once '../UploadService.php';
 require_once '../docking/request/ApiHLOrderPayAppletRequest.php';
-require_once '../docking/request/ApiHLOrderPayBarcodeRequest.php';
-require_once '../docking/request/ApiHLOrderPayDetailsRequest.php';
-require_once '../docking/request/ApiHLOrderPayUnifiedRequest.php';
-require_once '../docking/request/ApiHLOrderQueryApplyRequest.php';
-require_once '../docking/request/ApiHLOrderRefundDetailsRequest.php';
-require_once '../docking/request/ApiHLOrderRefundOperationRequest.php';
-require_once '../docking/request/ApiHLMerchantWxpayConfigRequest.php';
-require_once '../docking/request/ApiHLMerchantSwitchChannelRequest.php';
-require_once '../docking/enum/PayStyleEnum.php';
-require_once '../docking/enum/PayWayEnum.php';
-require_once '../docking/enum/ChannelEnum.php';
+echo "7";
 
-$client = new DefaultClient();
-$merchant = '751403';
-$account = '13777777777';
+$auth = "1423254150000001";
+$key = "hOnHeN2daY";
 
-//ApiHLOrderRefundDetailsTest($client, $merchant);
-//ApiHLOrderPayBarcodeTest($client, $merchant, $account);
-//ApiHLOrderPayDetailsTest($client, $merchant, "91022298190000003");
-//ApiHLOrderRefundOperationTest($client, $merchant, $account, "91022298190000003");
+$config = \lianok\core\config\OpenConfig::build("test", $auth, $key);
+$client = LianokService::build($config);
 
-//ApiHLMerchantWxpayConfigTest($client, $merchant, $account);
-//ApiHLMerchantSwitchChannelTest($client, $merchant, $account);
+$merchant = '102186';
+$account = '18555551939';
+
 ApiHLOrderPayAppletTest($client, $merchant, $account);
 
 function ApiHLOrderPayBarcodeTest($client, $merchant, $account)
 {
     $request = new ApiHLOrderPayBarcodeRequest();
-    $request->businessOrderNo = (new DateTimeUtil())->getTimestamp();
-    $request->deviceNo = (new DateTimeUtil())->getTimestamp();
+    $request->businessOrderNo = DateUtil::getTimestamp();
+    $request->deviceNo = DateUtil::getTimestamp();
     $request->merchantNo = $merchant;
     $request->operatorAccount = $account;
     $request->payAmount = 0.01;
@@ -48,7 +72,7 @@ function ApiHLOrderPayBarcodeTest($client, $merchant, $account)
 function ApiHLOrderRefundOperationTest($client, $merchant, $account, $orderNo)
 {
     $request = new ApiHLOrderRefundOperationRequest();
-    $request->businessRefundNo = (new DateTimeUtil())->getTimestamp();
+    $request->businessRefundNo = DateUtil::getTimestamp();
     $request->orderNo = $orderNo;
     $request->refundAmount = 0.01;
     // 退款密码
@@ -73,11 +97,11 @@ function ApiHLOrderPayDetailsTest($client, $merchant, $orderNo)
 
 function ApiHLOrderPayUnifiedTest($client, $merchant, $account){
     $request = new ApiHLOrderPayUnifiedRequest();
-    $request->businessOrderNo = (new DateTimeUtil())->getTimestamp();
-    $request->deviceNo = (new DateTimeUtil())->getTimestamp();
+    $request->businessOrderNo = DateUtil::getTimestamp();
+    $request->deviceNo = DateUtil::getTimestamp();
     $request->merchantNo = $merchant;
     $request->operatorAccount = $account;
-    $request->payWay = PayWayEnum::wechat->value;
+    $request->payWay = 'wechat';
     $request->payAmount = 0.01;
     $request->remark = "remark2";
 
@@ -110,19 +134,7 @@ function ApiHLMerchantWxpayConfigTest($client, $merchant, $account){
     $request->merchantNo = $merchant;
     $request->operatorAccount = $account;
     $request->appid = "wx1234567890123459";
-    $request->channelCode = ChannelEnum::suiXingFu->value;
-
-    $response = $client->execute($request);
-    print $response;
-}
-
-function ApiHLMerchantSwitchChannelTest($client, $merchant, $account){
-    $request = new ApiHLMerchantSwitchChannelRequest();
-    $request->merchantNo = $merchant;
-    $request->operatorAccount = $account;
-    $request->channelCode = ChannelEnum::leShua->value;
-    $request->payWay = PayWayEnum::wechat->value;
-    $request->payStyle = PayStyleEnum::applet->value;
+    $request->channelCode = 'suiXingFu';
 
     $response = $client->execute($request);
     print $response;
@@ -132,11 +144,13 @@ function ApiHLOrderPayAppletTest($client, $merchant, $account){
     $request = new ApiHLOrderPayAppletRequest();
     $request->merchantNo = $merchant;
     $request->operatorAccount = $account;
-    $request->payWay = PayWayEnum::alipay->value;
-    $request->businessOrderNo = (new DateTimeUtil())->getTimestamp();
-    $request->deviceNo = (new DateTimeUtil())->getTimestamp();
+    $request->payWay = 'alipay';
+    $request->businessOrderNo =DateUtil::getTimestamp();
+    $request->deviceNo = DateUtil::getTimestamp();
     $request->payAmount=0.01;
-    $request->openId="123123";
+    $request->userId="123123";
+    $request->openId = "123456";
+    $request->appId="wx123123";
 
     $response = $client->execute($request);
     print $response;
