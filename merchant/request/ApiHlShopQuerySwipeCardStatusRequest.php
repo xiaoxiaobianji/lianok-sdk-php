@@ -10,11 +10,11 @@ class ApiHlShopQuerySwipeCardStatusRequest extends AbstractDockingRequest
     /**
      * 商户编号
      */
-    public string $merchantNo;
+    public  $merchantNo;
     /**
      * 通道标识
      */
-    public string $channelCode;
+    public  $channelCode;
     /**
      * 刷卡费率类型,目前只能传1
      */

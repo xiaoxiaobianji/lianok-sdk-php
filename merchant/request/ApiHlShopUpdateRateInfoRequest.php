@@ -10,32 +10,32 @@ class ApiHlShopUpdateRateInfoRequest extends AbstractDockingRequest
     /**
      * 商户编号
      */
-    public string $merchantNo;
+    public  $merchantNo;
     /**
      * 通道名称
      */
-    public string $channelCode;
+    public  $channelCode;
     /**
      * 异步通知地址
      * 审核状态有变化时会发出通知
      */
-    public string $notifyUrl;
+    public  $notifyUrl;
     /**
      * 支付宝费率
      */
-    public string $alipayRate;
+    public  $alipayRate;
     /**
      * 微信费率
      */
-    public string $wechatPayRate;
+    public  $wechatPayRate;
     /**
      * 云闪付费率1000以下
      */
-    public string $cloudPayLe1000Rate;
+    public  $cloudPayLe1000Rate;
     /**
      * 云闪付费率1000以上
      */
-    public string $cloudPayGt1000Rate;
+    public  $cloudPayGt1000Rate;
 
     public function getResource(): string
     {

@@ -10,28 +10,28 @@ class ApiHlShopOpenSwipeRequest extends AbstractDockingRequest
     /**
      * 商户编号
      */
-    public string $merchantNo;
+    public  $merchantNo;
     /**
      * 通道标识
      */
-    public string $channelCode;
+    public  $channelCode;
     /**
      * 异步通知地址
      * 审核状态有变化时会发出通知
      */
-    public string $notifyUrl;
+    public  $notifyUrl;
     /**
      * 刷卡费率类型 目前只能传1
      */
-    public int $swipeType;
+    public $swipeType;
     /**
      * 借记卡费率
      */
-    public string $unionDebitRate;
+    public  $unionDebitRate;
     /**
      * 贷记卡费率
      */
-    public string $unionCreditRate;
+    public  $unionCreditRate;
 
     public function getResource(): string
     {

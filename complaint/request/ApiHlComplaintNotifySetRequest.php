@@ -9,12 +9,12 @@ class ApiHlComplaintNotifySetRequest extends AbstractDockingRequest
     /**
      * 火脸商户ID
      */
-    public string $merchantNo;
+    public  $merchantNo;
 
     /**
      * 投诉回调通知地址
      */
-    public string $notifyUrl;
+    public  $notifyUrl;
 
     public function getResource(): string
     {

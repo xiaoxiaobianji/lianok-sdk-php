@@ -9,37 +9,37 @@ class ApiHlBankFirmBranchRequest extends AbstractDockingRequest
     /**
      * 真实ip
      */
-    public string $ip;
+    public  $ip;
 
     /**
      * 城市代码
      */
-    public string $cityCode;
+    public  $cityCode;
 
     /**
      * 联行号
      */
-    public string $bankNo;
+    public  $bankNo;
 
     /**
      * 关键字
      */
-    public string $keyword;
+    public  $keyword;
 
     /**
      * 行别代码
      */
-    public string $bankCategory;
+    public  $bankCategory;
 
     /**
      * 当前页码
      */
-    public int $currentPage;
+    public $currentPage;
 
     /**
      * 每页条数
      */
-    public int $pageSize;
+    public $pageSize;
 
     public function getResource(): string
     {

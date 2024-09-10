@@ -4,15 +4,15 @@ namespace lianok\core\entity;
 
 class LianOkRequest
 {
-    public string $authCode;
+    public  $authCode;
 
-    public string $resource;
+    public  $resource;
 
-    public string $versionNo;
+    public  $versionNo;
 
-    public string $sign;
+    public  $sign;
 
-    public string $requestTime;
+    public  $requestTime;
 
-    public string $params;
+    public  $params;
 }

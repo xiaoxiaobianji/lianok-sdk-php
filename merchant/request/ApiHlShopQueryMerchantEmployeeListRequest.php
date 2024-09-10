@@ -7,11 +7,11 @@ use lianok\core\entity\AbstractDockingRequest;
 class ApiHlShopQueryMerchantEmployeeListRequest extends AbstractDockingRequest
 {
 
-    public string $merchantNo;
-    public string $shopNo;
-    public string $employeeName;
-    public int $pageSize;
-    public int $currentPage;
+    public  $merchantNo;
+    public  $shopNo;
+    public  $employeeName;
+    public $pageSize;
+    public $currentPage;
 
     public function getResource(): string
     {

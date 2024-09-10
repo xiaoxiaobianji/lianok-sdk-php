@@ -10,7 +10,7 @@ use lianok\core\config\AbstractConfig;
  */
 class ResponseBuilder
 {
-    private AbstractConfig $config;
+    private $config;
 
     public static function config(AbstractConfig $config): ResponseBuilder
     {

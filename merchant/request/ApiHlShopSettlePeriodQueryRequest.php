@@ -10,12 +10,12 @@ class ApiHlShopSettlePeriodQueryRequest extends AbstractDockingRequest
     /**
      * 商户编号
      */
-    public string $merchantNo;
+    public  $merchantNo;
 
     /**
      * 渠道编号
      */
-    public string $channelCode;
+    public  $channelCode;
 
     public function getResource(): string
     {

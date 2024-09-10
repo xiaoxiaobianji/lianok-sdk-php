@@ -7,7 +7,7 @@ use lianok\core\entity\AbstractDockingRequest;
 class ApiHlBankBusinessGetRequest extends AbstractDockingRequest
 {
 
-    public string $businessNo;
+    public  $businessNo;
 
     public function getResource(): string
     {

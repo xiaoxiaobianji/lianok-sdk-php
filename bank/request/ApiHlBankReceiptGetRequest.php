@@ -14,11 +14,11 @@ class ApiHlBankReceiptGetRequest extends AbstractDockingRequest
      * 3-交易退回
      * 4-充值入金
      */
-    public int $receiptType;
+    public $receiptType;
     /**
      * 申请单号
      */
-    public string $orderNo;
+    public  $orderNo;
 
 
     public function getResource(): string

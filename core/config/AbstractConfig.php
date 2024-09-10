@@ -9,15 +9,15 @@ abstract class AbstractConfig
     /**
      * @var string $url
      */
-    public string $url;
+    public  $url;
     /**
      * @var string $authCode
      */
-    public string $authCode;
+    public  $authCode;
     /**
      * @var string $key
      */
-    public string $key;
+    public  $key;
 
     /**
      * @param string $url 请求地址

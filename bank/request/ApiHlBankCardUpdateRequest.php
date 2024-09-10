@@ -7,46 +7,46 @@ use lianok\core\entity\AbstractDockingRequest;
 class ApiHlBankCardUpdateRequest extends AbstractDockingRequest
 {
 
-    public string $ip;
+    public  $ip;
     /**
      * 账号编号
      */
-    public string $businessNo;
+    public  $businessNo;
 
     /**
      * 银行卡号
      */
-    public string $bankCardNo;
+    public  $bankCardNo;
 
     /**
      * 开户名
      */
-    public string $bankCardName;
+    public  $bankCardName;
 
     /**
      * 联行号
      */
-    public string $bankNo;
+    public  $bankNo;
 
     /**
      * 支行名称
      */
-    public string $bankName;
+    public  $bankName;
 
     /**
      * 银行预留手机号
      */
-    public string $bankCardMobile;
+    public  $bankCardMobile;
 
     /**
      * 开户许可证url
      */
-    public string $openAcctUrl;
+    public  $openAcctUrl;
 
     /**
      * 开户许可证核准号或基本存款账户编号
      */
-    public string $openLicenceNo;
+    public  $openLicenceNo;
 
     public function getResource(): string
     {

@@ -60,6 +60,10 @@ class StringUtil
     {
         foreach ($req as $key => $value) {
             if (strlen($key) === strlen(trim($key))) {
+                //$req对象中的versionNo和requestTime已存在于$keyArr,不重复push到$keyArr
+                if (in_array($key, $keyArr)) {
+                    continue;
+                }
                 if ($value !== null) {
                     array_push($keyArr, $key);
                     array_push($valueArr, $value);

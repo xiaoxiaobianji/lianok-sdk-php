@@ -9,7 +9,7 @@ use lianok\core\utils\HttpClient;
 
 class UploadClient
 {
-    private UploadConfig $config;
+    private $config;
 
     public function __construct(UploadConfig $config)
     {

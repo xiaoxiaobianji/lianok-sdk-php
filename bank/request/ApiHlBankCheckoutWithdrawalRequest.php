@@ -7,19 +7,19 @@ use lianok\core\entity\AbstractDockingRequest;
 class ApiHlBankCheckoutWithdrawalRequest extends AbstractDockingRequest
 {
 
-    public string $ip;
+    public  $ip;
     /**
      * 账户编号
      */
-    public string $businessNo;
+    public  $businessNo;
     /**
      * 提现金额
      */
-    public string $amount;
+    public  $amount;
     /**
      * 摘要
      */
-    public string $memo;
+    public  $memo;
 
     public function getResource(): string
     {

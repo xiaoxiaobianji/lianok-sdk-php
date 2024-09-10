@@ -7,352 +7,352 @@ use lianok\core\entity\AbstractDockingRequest;
 class ApiHlBankEnterpriseOpenRequest extends AbstractDockingRequest
 {
 
-    public string $ip;
+    public  $ip;
     /**
      * 账户类型
      * person=个人个体工商=individual,企业商户=enterprise
      */
-    public string $businessType;
+    public  $businessType;
     /**
      * 交易户名称
      */
-    public string $businessName;
+    public  $businessName;
 
     /**
      * 银行卡号
      */
-    public string $bankCardNo;
+    public  $bankCardNo;
 
     /**
      * 开户名
      */
-    public string $bankCardName;
+    public  $bankCardName;
 
     /**
      * 联行号
      */
-    public string $bankNo;
+    public  $bankNo;
 
     /**
      * 支行名称
      */
-    public string $bankName;
+    public  $bankName;
 
     /**
      * 预留手机号
      */
-    public string $bankCardMobile;
+    public  $bankCardMobile;
 
     /**
      * 姓名
      */
-    public string $legalName;
+    public  $legalName;
 
     /**
      * 身份证类型
      */
-    public string $legalIdType;
+    public  $legalIdType;
 
     /**
      * 身份证编号
      */
-    public string $legalIdNo;
+    public  $legalIdNo;
 
     /**
      * 证件有效期(开始时间)
      */
-    public string $legalIdStartDate;
+    public  $legalIdStartDate;
 
     /**
      * 证件有效期(结束时间)/长期
      */
-    public string $legalIdEndDate;
+    public  $legalIdEndDate;
 
     /**
      * 0-结束时间点 1-永久有效
      */
-    public bool $legalPermanent;
+    public $legalPermanent;
 
     /**
      * 身份证人像图片
      */
-    public string $legalIdFrontUrl;
+    public  $legalIdFrontUrl;
 
     /**
      * 身份证国徽图片
      */
-    public string $legalIdBackUrl;
+    public  $legalIdBackUrl;
 
     /**
      * 企业名称
      */
-    public string $corpName;
+    public  $corpName;
 
     /**
      * 企业证件类别 1-三证三号；2-三证合一；0-个体工商户；
      */
-    public string $corpType;
+    public  $corpType;
 
     /**
      * 证件类型 20-统一社会信用代码
      */
-    public string $corpIdType;
+    public  $corpIdType;
 
     /**
      * 统一社会信用代码
      */
-    public string $businessLicenceNo;
+    public  $businessLicenceNo;
 
     /**
      * 注册地址省
      */
-    public string $registerProvince;
+    public  $registerProvince;
 
     /**
      * 注册地址市
      */
-    public string $registerCity;
+    public  $registerCity;
 
     /**
      * 注册地址区
      */
-    public string $registerDistrict;
+    public  $registerDistrict;
 
     /**
      * 注册详细地址
      */
-    public string $registerAddress;
+    public  $registerAddress;
 
     /**
      * 注册资本,单位元
      */
-    public string $registeredCapital;
+    public  $registeredCapital;
 
     /**
      * 经营地址省
      */
-    public string $operatingProvince;
+    public  $operatingProvince;
 
     /**
      * 经营地址市
      */
-    public string $operatingCity;
+    public  $operatingCity;
 
     /**
      * 经营地址区
      */
-    public string $operatingDistrict;
+    public  $operatingDistrict;
 
     /**
      * 经营详细地址
      */
-    public string $operatingAddress;
+    public  $operatingAddress;
 
     /**
      * 经营范围
      */
-    public string $businessScope;
+    public  $businessScope;
 
     /**
      * 营业期限开始日期
      */
-    public string $businessLicenceStartDate;
+    public  $businessLicenceStartDate;
 
     /**
      * 营业期限结束日期
      */
-    public string $businessLicenceEndDate;
+    public  $businessLicenceEndDate;
 
     /**
      * 营业执照是否永久有效
      */
-    public bool $corpPermanent;
+    public $corpPermanent;
 
     /**
      * 企业联系电话
      */
-    public string $corpContractPhone;
+    public  $corpContractPhone;
 
     /**
      * 税务登记号
      */
-    public string $taxRegNo;
+    public  $taxRegNo;
 
     /**
      * 组织机构代码
      */
-    public string $orgNo;
+    public  $orgNo;
 
     /**
      * 营业执照副本url
      */
-    public string $businessLicenceUrl;
+    public  $businessLicenceUrl;
 
     /**
      * 税务登记证url
      */
-    public string $taxCertUrl;
+    public  $taxCertUrl;
 
     /**
      * 组织机构代码证url
      */
-    public string $orgCertUrl;
+    public  $orgCertUrl;
 
     /**
      * 开户许可证url
      */
-    public string $openAcctUrl;
+    public  $openAcctUrl;
 
     /**
      * 委托授权书url
      */
-    public string $authUrl;
+    public  $authUrl;
 
     /**
      * 企业委托授权书url
      */
-    public string $corpAuthUrl;
+    public  $corpAuthUrl;
 
     /**
      * 其他审核图片1url
      */
-    public string $expPicUrl1;
+    public  $expPicUrl1;
 
     /**
      * 其他审核图片2url
      */
-    public string $expPicUrl2;
+    public  $expPicUrl2;
 
     /**
      * 其他审核图片3url
      */
-    public string $expPicUrl3;
+    public  $expPicUrl3;
 
     /**
      * 备注
      */
-    public string $corpRemark;
+    public  $corpRemark;
 
     /**
      * 受益人姓名
      */
-    public string $beneficiaryName;
+    public  $beneficiaryName;
 
     /**
      * 受益人证件类型
      */
-    public string $beneficiaryIdType;
+    public  $beneficiaryIdType;
 
     /**
      * 受益人身份证编号/证件号
      */
-    public string $beneficiaryIdNo;
+    public  $beneficiaryIdNo;
 
     /**
      * 受益人证件有效期(开始时间)
      */
-    public string $beneficiaryIdStartDate;
+    public  $beneficiaryIdStartDate;
 
     /**
      * 受益人证件有效期(结束时间)/长期
      */
-    public string $beneficiaryIdEndDate;
+    public  $beneficiaryIdEndDate;
 
     /**
      * 受益人身份证永久有效
      */
-    public bool $beneficiaryPermanent;
+    public $beneficiaryPermanent;
 
     /**
      * 受益人地址
      */
-    public string $beneficiaryAddress;
+    public  $beneficiaryAddress;
 
     /**
      * 1-企业；2-个人
      */
-    public string $holdType;
+    public  $holdType;
 
     /**
      * 控股股东/实际控制人姓名
      */
-    public string $holdName;
+    public  $holdName;
 
     /**
      * 控股股东/实际控制人证件类型
      */
-    public string $holdIdType;
+    public  $holdIdType;
 
     /**
      * 控股股东/实际控制人身份证编号/证件号
      */
-    public string $holdIdNo;
+    public  $holdIdNo;
 
     /**
      * 控股股东/实际控制人证件有效期(开始时间)
      */
-    public string $holdIdStartDate;
+    public  $holdIdStartDate;
 
     /**
      * 控股股东/实际控制人证件有效期(结束时间)
      */
-    public string $holdIdEndDate;
+    public  $holdIdEndDate;
 
     /**
      * 控股股东/实际控制人证件永久有效
      */
-    public bool $holdPermanent;
+    public $holdPermanent;
 
     /**
      * 经办人姓名
      */
-    public string $operatorName;
+    public  $operatorName;
 
     /**
      * 经办人身份证类型
      * 固定值：10
      */
-    public string $operatorIdType;
+    public  $operatorIdType;
 
     /**
      * 经办人身份证编号
      */
-    public string $operatorIdNo;
+    public  $operatorIdNo;
 
     /**
      * 经办人证件有效期(开始时间)
      */
-    public string $operatorIdStartDate;
+    public  $operatorIdStartDate;
 
     /**
      * 经办人证件有效期(结束时间)
      */
-    public string $operatorIdEndDate;
+    public  $operatorIdEndDate;
 
     /**
      * 经办人身份证永久有效
      */
-    public bool $operatorPermanent;
+    public $operatorPermanent;
 
     /**
      * 经办人手机号
      */
-    public string $operatorPhone;
+    public  $operatorPhone;
 
     /**
      * 经办人邮箱
      */
-    public string $operatorEmail;
+    public  $operatorEmail;
 
     /**
      * 经办人身份证人像图片
      */
-    public string $operatorIdFrontUrl;
+    public  $operatorIdFrontUrl;
 
     /**
      * 经办人身份证国徽图片
      */
-    public string $operatorIdBackUrl;
+    public  $operatorIdBackUrl;
 
 
     public function getResource(): string

@@ -10,24 +10,24 @@ class ApiHlShopUpdateShopShortNameRequest extends AbstractDockingRequest
     /**
      * 商户编号
      */
-    public string $merchantNo;
+    public  $merchantNo;
     /**
      * 通道标识
      */
-    public string $channelCode;
+    public  $channelCode;
     /**
      * 异步通知地址
      * 审核状态有变化时会发出通知
      */
-    public string $notifyUrl;
+    public  $notifyUrl;
     /**
      * 商户简称
      */
-    public string $merchantShortName;
+    public  $merchantShortName;
     /**
      * 资料变更申请书
      */
-    public string $changeFormImg;
+    public  $changeFormImg;
 
     public function getResource(): string
     {

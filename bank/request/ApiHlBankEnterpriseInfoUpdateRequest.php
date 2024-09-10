@@ -8,91 +8,91 @@ class ApiHlBankEnterpriseInfoUpdateRequest extends AbstractDockingRequest
 {
 
 
-    public string $ip;
+    public  $ip;
     /**
      * 修改时传入
      */
-    public string $businessNo;
+    public  $businessNo;
 
     /**
      * 交易户名称
      */
-    public string $businessName;
+    public  $businessName;
 
     /**
      * 姓名
      */
-    public string $legalName;
+    public  $legalName;
 
     /**
      * 身份证类型
      */
-    public string $legalIdType;
+    public  $legalIdType;
 
     /**
      * 身份证编号
      */
-    public string $legalIdNo;
+    public  $legalIdNo;
 
     /**
      * 证件有效期(开始时间)
      */
-    public string $legalIdStartDate;
+    public  $legalIdStartDate;
 
     /**
      * 证件有效期(结束时间)
      */
-    public string $legalIdEndDate;
+    public  $legalIdEndDate;
 
     /**
      * 是否永久有效
      */
-    public bool $legalPermanent;
+    public $legalPermanent;
 
     /**
      * 身份证人像图片
      */
-    public string $legalIdFrontUrl;
+    public  $legalIdFrontUrl;
 
     /**
      * 身份证国徽图片
      */
-    public string $legalIdBackUrl;
+    public  $legalIdBackUrl;
 
     /**
      * 企业联系电话
      */
-    public string $corpContractPhone;
+    public  $corpContractPhone;
 
     /**
      * 营业执照副本url
      */
-    public string $businessLicenceUrl;
+    public  $businessLicenceUrl;
 
     /**
      * 注册资本,单位元
      */
-    public string $registeredCapital;
+    public  $registeredCapital;
 
     /**
      * 经营范围
      */
-    public string $businessScope;
+    public  $businessScope;
 
     /**
      * 营业期限开始日期
      */
-    public string $businessLicenceStartDate;
+    public  $businessLicenceStartDate;
 
     /**
      * 营业期限结束日期
      */
-    public string $businessLicenceEndDate;
+    public  $businessLicenceEndDate;
 
     /**
      * 是否永久有效
      */
-    public bool $corpPermanent;
+    public $corpPermanent;
 
     public function getResource(): string
     {

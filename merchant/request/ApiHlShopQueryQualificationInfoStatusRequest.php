@@ -10,11 +10,11 @@ class ApiHlShopQueryQualificationInfoStatusRequest extends AbstractDockingReques
     /**
      * 商户编号
      */
-    public string $merchantNo;
+    public  $merchantNo;
     /**
      * 通道标识
      */
-    public string $channelCode;
+    public  $channelCode;
 
     public function getResource(): string
     {

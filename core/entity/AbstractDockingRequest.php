@@ -16,13 +16,13 @@ abstract class AbstractDockingRequest
     /**
      * 对接接口版本，默认 1
      */
-    private string $versionNo = "1";
+    public  $versionNo = "1";
 
     /**
      * 当前时间
      * 格式：yyyyMMddHHmmss
      */
-    private string $requestTime;
+    public  $requestTime;
 
     /**
      * @param string $versionNo

@@ -10,44 +10,44 @@ class ApiHlOrderPayBankRequest extends AbstractDockingRequest
     /**
      * 对接商系统订单号
      */
-    public string $businessOrderNo;
+    public  $businessOrderNo;
     /**
      * 订单支付金额
      */
-    public string $payAmount;
+    public  $payAmount;
     /**
      * 订单备注
      */
-    public string $remark;
+    public  $remark;
     /**
      * 商户ID
      */
-    public string $merchantNo;
+    public  $merchantNo;
     /**
      * 操作者账号
      */
-    public string $operatorAccount;
+    public  $operatorAccount;
     /**
      * 收银设备ID
      */
-    public string $deviceNo;
+    public  $deviceNo;
     /**
      * 异步通知地址
      */
-    public string $notifyUrl;
+    public  $notifyUrl;
     /**
      * 商品名称
      */
-    public string $subject;
+    public  $subject;
     /**
      * 支付方式
      * 支持的类型，b2c_bank，b2b_bank，quick_pay
      */
-    public string $payWay;
+    public  $payWay;
     /**
      * 银行卡绑定的手机号
      */
-    public string $phone;
+    public  $phone;
     /**
      * 订单失效时间
      */
@@ -55,15 +55,15 @@ class ApiHlOrderPayBankRequest extends AbstractDockingRequest
     /**
      * 支付成功页面跳转地址
      */
-    public string $pageNotifyUrl;
+    public  $pageNotifyUrl;
     /**
      * 银行卡信息
      */
-    public string $bankCard;
+    public  $bankCard;
     /**
      * 银行卡类型
      */
-    public string $cardType;
+    public  $cardType;
 
     public function getResource(): string
     {

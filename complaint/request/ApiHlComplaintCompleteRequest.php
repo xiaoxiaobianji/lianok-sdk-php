@@ -7,11 +7,11 @@ use lianok\core\entity\AbstractDockingRequest;
 class ApiHlComplaintCompleteRequest extends AbstractDockingRequest
 {
 
-    public string $merchantNo;
+    public  $merchantNo;
 
-    public string $huolianComplaintNo;
+    public  $huolianComplaintNo;
 
-    public string $operatorUserAccount;
+    public  $operatorUserAccount;
 
     public function getResource(): string
     {

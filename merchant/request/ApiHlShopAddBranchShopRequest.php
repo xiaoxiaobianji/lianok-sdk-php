@@ -7,15 +7,15 @@ use lianok\core\entity\AbstractDockingRequest;
 class ApiHlShopAddBranchShopRequest extends AbstractDockingRequest
 {
 
-    public string $merchantNo;
-    public string $shopName;
-    public string $mccCode;
-    public string $phone;
-    public string $provinceCode;
-    public string $cityCode;
-    public string $areaCode;
-    public string $address;
-    public string $contacter;
+    public  $merchantNo;
+    public  $shopName;
+    public  $mccCode;
+    public  $phone;
+    public  $provinceCode;
+    public  $cityCode;
+    public  $areaCode;
+    public  $address;
+    public  $contacter;
 
     public function getResource(): string
     {
