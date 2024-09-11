@@ -12,15 +12,15 @@ class ApiHlOrderAccountStatementApplyRequest extends AbstractDockingRequest
      * 下载对账日期
      * 格式：yyyy-MM-dd
      */
-    public string $billDate;
+    public  $billDate;
     /**
      * 载对账日期开始时间
      */
-    public string $billBeginTime;
+    public  $billBeginTime;
     /**
      * 下载对账日期结束时间
      */
-    public string $billEndTime;
+    public  $billEndTime;
     /**
      * 下载类型
      * 1：日统计数据
@@ -31,11 +31,11 @@ class ApiHlOrderAccountStatementApplyRequest extends AbstractDockingRequest
      * 6：延时结算确认订单明细
      * 7：延时结算退款订单明细
      */
-    public int $downType;
+    public $downType;
     /**
      * 商户号
      */
-    public string $merchantNo;
+    public  $merchantNo;
 
     public function getResource(): string
     {

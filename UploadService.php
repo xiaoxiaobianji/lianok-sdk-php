@@ -9,7 +9,7 @@ use lianok\core\entity\AbstractUploadRequest;
 class UploadService
 {
 
-    private UploadClient $client;
+    private $client;
 
     public static function build(UploadConfig $config): UploadService
     {

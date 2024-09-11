@@ -7,8 +7,8 @@ use lianok\core\entity\AbstractDockingRequest;
 class ApiHlShopQueryZfbAuthorizeStateRequest extends AbstractDockingRequest
 {
 
-    public string $merchantNo;
-    public string $channelCode;
+    public  $merchantNo;
+    public  $channelCode;
 
     public function getResource(): string
     {

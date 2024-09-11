@@ -7,11 +7,11 @@ use lianok\core\utils\StringUtil;
 class ResponseBase
 {
 
-    public int $code;
+    public $code;
 
-    public string $message;
+    public  $message;
 
-    public int $status;
+    public $status;
 
     public $body;
 

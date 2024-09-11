@@ -8,57 +8,57 @@ class ApiHlBankPersonInfoUpdateRequest extends AbstractDockingRequest
 {
 
 
-    public string $ip;
+    public  $ip;
     /**
      * 账户编号
      */
-    public string $businessNo;
+    public  $businessNo;
 
     /**
      * 交易户名称
      */
-    public string $businessName;
+    public  $businessName;
 
 
     /**
      * 姓名
      */
-    public string $userName;
+    public  $userName;
 
     /**
      * 身份证类型
      */
-    public string $userIdType;
+    public  $userIdType;
 
     /**
      * 身份证编号
      */
-    public string $userIdNo;
+    public  $userIdNo;
 
     /**
      * 证件有效期(开始时间)
      */
-    public string $userIdStartDate;
+    public  $userIdStartDate;
 
     /**
      * 证件有效期(结束时间)/长期
      */
-    public string $userIdEndDate;
+    public  $userIdEndDate;
 
     /**
      * 是否永久有效
      */
-    public bool $userPermanent;
+    public $userPermanent;
 
     /**
      * 身份证人像图片
      */
-    public string $userIdFrontUrl;
+    public  $userIdFrontUrl;
 
     /**
      * 身份证国徽图片
      */
-    public string $userIdBackUrl;
+    public  $userIdBackUrl;
 
     public function getResource(): string
     {

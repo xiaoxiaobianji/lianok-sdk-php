@@ -7,7 +7,7 @@ use lianok\core\entity\AbstractDockingRequest;
 class ApiHlComplaintNotifyQueryRequest extends AbstractDockingRequest
 {
 
-    public string $merchantNo;
+    public  $merchantNo;
 
     public function getResource(): string
     {

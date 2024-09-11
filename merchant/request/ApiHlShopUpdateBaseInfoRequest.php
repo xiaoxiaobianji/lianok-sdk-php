@@ -10,52 +10,52 @@ class ApiHlShopUpdateBaseInfoRequest extends AbstractDockingRequest
     /**
      * 商户编号
      */
-    public string $merchantNo;
+    public  $merchantNo;
     /**
      * 通道标识
      */
-    public string $channelCode;
+    public  $channelCode;
     /**
      * 异步通知地址
      * 审核状态有变化时会发出通知
      */
-    public string $notifyUrl;
+    public  $notifyUrl;
     /**
      * 商户类型
      */
-    public string $merchantType;
+    public  $merchantType;
     /**
      * 经营类目编码
      */
-    public string $mccCode;
+    public  $mccCode;
     /**
      * 经营区域-省
      */
-    public string $provinceCode;
+    public  $provinceCode;
     /**
      * 经营区域-市
      */
-    public string $cityCode;
+    public  $cityCode;
     /**
      * 经营区域-区
      */
-    public string $areaCode;
+    public  $areaCode;
     /**
      * 详细地址
      */
-    public string $address;
+    public  $address;
     /**
      * 门头照
      */
-    public string $shopFaceImg;
+    public  $shopFaceImg;
     /**
      * 内景照
      */
-    public string $shopInnerImg;
+    public  $shopInnerImg;
     /**
      * 收银台照
      */
-    public string $shopCashdeskImg;
+    public  $shopCashdeskImg;
 
     public function getResource(): string
     {

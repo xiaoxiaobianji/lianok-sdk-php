@@ -9,7 +9,7 @@ class ApiHlBankCheckoutGetRequest extends AbstractDockingRequest{
     /**
      * 提现单号
      */
-    public string $orderNo;
+    public  $orderNo;
 
     public function getResource(): string
     {

@@ -10,7 +10,7 @@ use lianok\core\utils\HttpClient;
 
 class ResponseClient
 {
-    private AbstractConfig $config;
+    private $config;
 
     public function __construct(AbstractConfig $config)
     {
@@ -39,7 +39,15 @@ class ResponseClient
         $lianOkRequest->requestTime = $request->getRequestTime();
         $lianOkRequest->versionNo = $request->getVersionNo();
         $lianOkRequest->sign = $sign;
-        $lianOkRequest->params = json_encode($request);
+        $noneNullParamData = [];
+        foreach ($request as $key => $value) {
+            if ($value !== null) {
+                $noneNullParamData[$key] = $value;
+            }
+        }
+        unset($noneNullParamData["versionNo"]);
+        unset($noneNullParamData["requestTime"]);
+        $lianOkRequest->params = json_encode($noneNullParamData);
         return HttpClient::doPost($this->config->url, json_encode($lianOkRequest));
     }
 }

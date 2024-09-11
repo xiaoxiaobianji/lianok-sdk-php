@@ -7,17 +7,17 @@ use lianok\core\entity\AbstractDockingRequest;
 class ApiHlComplaintLogListQueryRequest extends AbstractDockingRequest
 {
 
-    public string $merchantNo;
+    public  $merchantNo;
 
-    public string $huolianComplaintNo;
+    public  $huolianComplaintNo;
 
-    public string $beginTime;
+    public  $beginTime;
 
-    public string $endTime;
+    public  $endTime;
 
-    public int $pageNo;
+    public $pageNo;
 
-    public int $pageSize;
+    public $pageSize;
 
 
     public function getResource(): string

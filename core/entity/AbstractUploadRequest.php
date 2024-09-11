@@ -7,15 +7,15 @@ abstract class AbstractUploadRequest extends AbstractDockingRequest
     /**
      * 图片名称
      */
-    private string $fileName;
+    public  $fileName;
     /**
      * 图片
      */
-    private string $file;
+    public  $file;
     /**
      * 图片标签
      */
-    private string $fileTag;
+    public  $fileTag;
 
     /**
      * @return ?string

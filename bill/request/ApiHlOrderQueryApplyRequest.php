@@ -10,7 +10,7 @@ class ApiHlOrderQueryApplyRequest extends AbstractDockingRequest
     /**
      * 下载对账单唯一标识，请求申请对单接口成功时返回
      */
-    public string $downIdentification;
+    public  $downIdentification;
 
     public function getResource(): string
     {

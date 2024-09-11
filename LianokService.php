@@ -8,7 +8,7 @@ use lianok\core\entity\AbstractDockingRequest;
 
 class LianokService
 {
-    private ResponseClient $client;
+    private $client;
 
     public static function build(AbstractConfig $config): LianokService
     {

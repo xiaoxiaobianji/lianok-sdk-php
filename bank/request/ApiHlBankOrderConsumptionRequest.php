@@ -7,49 +7,49 @@ use lianok\core\entity\AbstractDockingRequest;
 class ApiHlBankOrderConsumptionRequest extends AbstractDockingRequest
 {
 
-    public string $ip;
+    public  $ip;
 
     /**
      * 对接方请求流水号，不可重复
      */
-    public string $thirdOrderNo;
+    public  $thirdOrderNo;
 
     /**
      * 收款人（卖方）
      */
-    public string $payeeBusinessNo;
+    public  $payeeBusinessNo;
 
     /**
      * 付款人（买方）
      */
-    public string $payerBusinessNo;
+    public  $payerBusinessNo;
 
     /**
      * 付款金额
      */
-    public string $amount;
+    public  $amount;
 
     /**
      * 商品订单编号
      */
-    public string $productOrderId;
+    public  $productOrderId;
 
     /**
      * 商品名称
      */
-    public string $productName;
+    public  $productName;
 
     /**
      * 商品订单金额
      */
-    public string $productOrderAmount;
+    public  $productOrderAmount;
 
     /**
      * 商品数量
      */
-    public int $productCount;
+    public $productCount;
 
-    public string $remark;
+    public  $remark;
 
     public function getResource(): string
     {

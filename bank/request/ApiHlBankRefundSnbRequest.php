@@ -10,23 +10,23 @@ class ApiHlBankRefundSnbRequest extends AbstractDockingRequest
     /**
      * 客户真实ip
      */
-    public string $ip;
+    public  $ip;
     /**
      * 订单号
      */
-    public string $orderNo;
+    public  $orderNo;
     /**
      * 第三方退款订单号
      */
-    public string $thirdRefundNo;
+    public  $thirdRefundNo;
     /**
      * 退款金额
      */
-    public string $amount;
+    public  $amount;
     /**
      * 摘要
      */
-    public string $remark;
+    public  $remark;
 
     public function getResource(): string
     {

@@ -9,11 +9,11 @@ class ApiHlBankCardUpdateStatusRequest extends AbstractDockingRequest
     /**
      * 账户编号
      */
-    public string $businessNo;
+    public  $businessNo;
     /**
      * 修改结算卡返回流水号
      */
-    public string $flowNo;
+    public  $flowNo;
 
     public function getResource(): string
     {

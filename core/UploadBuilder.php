@@ -8,7 +8,7 @@ use lianok\core\config\UploadConfig;
 class UploadBuilder
 {
 
-    private UploadConfig $config;
+    private $config;
 
     public static function config(UploadConfig $config): UploadBuilder
     {

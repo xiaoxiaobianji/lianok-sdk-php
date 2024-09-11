@@ -7,25 +7,25 @@ use lianok\core\entity\AbstractDockingRequest;
 class ApiHlComplaintReplyRequest extends AbstractDockingRequest
 {
 
-    public string $merchantNo;
+    public  $merchantNo;
 
-    public string $huolianComplaintNo;
+    public  $huolianComplaintNo;
 
-    public string $operationLogNo;
+    public  $operationLogNo;
 
-    public string $replyToLogNo;
+    public  $replyToLogNo;
 
-    public string $replyContent;
+    public  $replyContent;
 
-    public string $replyImage;
+    public  $replyImage;
 
-    public string $operatorUserAccount;
+    public  $operatorUserAccount;
 
-    public string $operatorUserName;
+    public  $operatorUserName;
 
-    public string $operateOrigin;
+    public  $operateOrigin;
 
-    public string $actionType;
+    public  $actionType;
 
     public function getResource(): string
     {
