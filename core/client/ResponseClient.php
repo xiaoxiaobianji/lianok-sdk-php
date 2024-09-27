@@ -31,13 +31,14 @@ class ResponseClient
             $requestTime = DateUtil::getTimestamp();
             $request->setRequestTime($requestTime);
         }
-
+        $reqTime = $request->getRequestTime();
+        $versionNo = $request->getVersionNo();
         $sign = $this->config->encrypt($request);
         $lianOkRequest = new LianOkRequest();
         $lianOkRequest->authCode = $this->config->authCode;
         $lianOkRequest->resource = $request->getResource();
-        $lianOkRequest->requestTime = $request->getRequestTime();
-        $lianOkRequest->versionNo = $request->getVersionNo();
+        $lianOkRequest->requestTime = $reqTime;
+        $lianOkRequest->versionNo = $versionNo;
         $lianOkRequest->sign = $sign;
         $noneNullParamData = [];
         foreach ($request as $key => $value) {

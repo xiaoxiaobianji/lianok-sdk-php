@@ -20,7 +20,6 @@ echo "2";
 
 require_once '../core/config/AbstractConfig.php';
 require_once '../core/config/OpenConfig.php';
-require_once '../core/config/EntryConfig.php';
 require_once '../core/config/UploadConfig.php';
 echo "3";
 
@@ -40,6 +39,14 @@ echo "6";
 require_once '../LianokService.php';
 require_once '../UploadService.php';
 require_once '../docking/request/ApiHLOrderPayAppletRequest.php';
+require_once '../merchant/request/ApiHlMerchantWxpayConfigRequest.php';
+require_once '../docking/request/ApiHLOrderCloseRequest.php';
+require_once '../docking/request/ApiHLOrderPayBarcodeRequest.php';
+require_once '../docking/request/ApiHLOrderPayDetailsRequest.php';
+require_once '../docking/request/ApiHLOrderPayUnifiedRequest.php';
+require_once '../docking/request/ApiHLOrderRefundDetailsRequest.php';
+require_once '../docking/request/ApiHLOrderRefundOperationRequest.php';
+
 echo "7";
 
 $auth = "1423254150000001";
@@ -51,7 +58,53 @@ $client = LianokService::build($config);
 $merchant = '102186';
 $account = '18555551939';
 
+echo "<br/><br/>接口文档里签名算法要求为签名算法1.0的api,请使用OpenConfig类进行配置<br/><br/>";
+
+echo "<br/>";
+echo "小程序支付接口:";
 ApiHLOrderPayAppletTest($client, $merchant, $account);
+echo "<br/>";
+
+echo "<br/>";
+echo "被扫支付接口:";
+ApiHLOrderPayBarcodeTest($client, $merchant, $account);
+echo "<br/>";
+
+echo "<br/>";
+echo "退款接口:";
+ApiHLOrderRefundOperationTest($client, $merchant, $account, "91024255130000001");
+echo "<br/>";
+
+echo "<br/>";
+echo "订单详情查询接口:";
+ApiHLOrderPayDetailsTest($client, $merchant, "91024255130000001");
+echo "<br/>";
+
+echo "<br/>";
+echo "聚合支付接口:";
+ApiHLOrderPayUnifiedTest($client, $merchant, $account);
+echo "<br/>";
+
+echo "<br/>";
+echo "订单关单接口:";
+ApiHLOrderCloseTest($client, $merchant, "91024255130000001");
+echo "<br/>";
+
+echo "<br/>";
+echo "退款详情查询接口:";
+ApiHLOrderRefundDetailsTest($client, $merchant);
+echo "<br/>";
+
+echo "<br/>";
+echo "退款详情查询接口:";
+ApiHLOrderRefundDetailsTest($client, $merchant);
+echo "<br/>";
+
+echo "<br/>";
+echo "微信配置查询接口:";
+ApiHLMerchantWxpayConfigTest($client, $merchant, $account);
+echo "<br/>";
+
 
 function ApiHLOrderPayBarcodeTest($client, $merchant, $account)
 {
@@ -123,7 +176,7 @@ function ApiHLOrderRefundDetailsTest($client, $merchant)
 {
     $request = new ApiHLOrderRefundDetailsRequest();
     $request->merchantNo = $merchant;
-    $request->refundNo = "2022231090000002";
+    $request->refundNo = "92023297100000005";
 
     $response = $client->execute($request);
     print $response;
