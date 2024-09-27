@@ -40,6 +40,10 @@ final class EntryConfig extends AbstractConfig
         $requestTime = $request->getRequestTime();
         $resource = $request->getResource();
         $keyArr = array("authCode", "params", "resource", "requestTime", "versionNo");
+        //签名处理:request(即params对象)排除requestTime和versionNo字段后再转换成json
+        unset($request->requestTime);
+        unset($request->versionNo);
+
         $valueArr = array($this->authCode, json_encode($request), $resource, $requestTime, $versionNo);
         array_multisort($keyArr, $valueArr);
         $content = '';
