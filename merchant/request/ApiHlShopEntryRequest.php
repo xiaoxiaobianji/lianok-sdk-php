@@ -57,6 +57,13 @@ class ApiHlShopEntryRequest extends AbstractDockingRequest
     public  $cloudPayStatus;
     public  $cloudPayLe1000Rate;
     public  $cloudPayGt1000Rate;
+	public  $merchantNo;
+    public  $platformUserName;
+    public  $platformUserPhone;
+    public  $manageUserName;
+    public  $manageUserLoginAccount;
+    public  $manageUserPhone;
+
 
     public function getResource(): string
     {
