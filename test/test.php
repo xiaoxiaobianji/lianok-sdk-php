@@ -58,8 +58,11 @@ $client = LianokService::build($config);
 $merchant = '102186';
 $account = '18555551939';
 
-echo "<br/><br/>接口文档里签名算法要求为签名算法1.0的api,请使用OpenConfig类进行配置<br/><br/>";
-
+echo "<br/><br/>请阅读接口文档,不同业务接口有不同签名算法,请根据接口文档说明选用合适的配置类, <br/>"
+    ."接口文档里签名算法要求为签名算法1.0的api,请使用OpenConfig类进行配置,<br/>"
+    ."接口文档里签名算法要求为签名算法2.0的api,请使用EntryConfig类进行配置,<br/>"
+    ."上传图片,请使用UploadConfig类进行配置<br/>"
+    ."<br/><br/>";
 echo "<br/>";
 echo "小程序支付接口:";
 ApiHLOrderPayAppletTest($client, $merchant, $account);
